@@ -1,0 +1,50 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.Player{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+
+}
+
+.Player {
+    display: flex;
+    justify-content: space-around;
+    margin:50px 0;
+}
+
+.Player #Player-hand p{
+    font-size: 5rem;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Computer img {
+    width: 30%;
+}
+
+#result {
+    font-size: 5rem;
+    color: magenta;
+}
+
+img {
+    animation: bounce 0.5s infinite alternate;
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

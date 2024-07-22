@@ -4,15 +4,36 @@
 <head>
     <title>Janken</title>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-    <script src="./js/main.js" ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div>あなたの手</div>
-    <button type="button" onclick="init()">認識開始</button>
-    <div id="webcam-container"></div>
-    <div id="label-container"></div>
+
+    <header>
+        <h1>画像認識じゃんけん</h1>
+    </header>
+
+    <div class="Player">
+        <div>
+            <button type="button" onclick="init()">認識開始</button>
+            <div id="webcam-container"></div>
+        </div>
+        <div id="Player-hand">
+            <h2>あなたの手は</h2>
+            <p id="Player-hand-value"></p>
+        </div>
+    </div>
+
+    <div class="Computer">
+        <h2>コンピュータの手は</h2>
+        <img src="./img/guu.jpg" alt="" id="hand_guu">
+        <img src="./img/tyoki.jpg" alt="" id="hand_choki">
+        <img src="./img/pa.jpg" alt="" id="hand_paa">
+    </div>
+    <div id="result"></div>
 </body>
 
 </html>
